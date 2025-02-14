@@ -1,0 +1,15 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/.vscode/launch.json
+*.js.map
+dump.**.json
+/index_old.jso
+dump.**.json
+/**/dump.**.json
+/**/dump.**/**.json
+/logs/*.log*
+/package-lock.json
+/logs/.*.json
+/build/*

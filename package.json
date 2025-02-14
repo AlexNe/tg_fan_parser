@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "@prisma/client": "^6.3.1",
+    "dotenv": "^16.4.7",
+    "env": "^0.0.2",
+    "input": "^1.0.1",
+    "mysql2": "^3.12.0",
+    "telegram": "^2.21.2",
+    "websocket": "^1.0.35",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.3.1",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "name": "3.mtproto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon",
+    "prestart": "npm run build",
+    "build": "rimraf ./build && tsc",
+    "prod": "npm run build && node build/index.js",
+    "db:migrate": "npx prisma migrate deploy",
+    "db:update": "npx prisma migrate dev",
+    "db:init": "npx prisma migrate dev --create-only"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
