@@ -105,8 +105,8 @@ export default class Telegram extends TelegramCore {
         let name: user = await this.getUserInfoFromMessage(message)
         let direction = message.out ? "<<<" : ">>>"
         if (497004399 == user_id as any && message.out) {
-            console.log("Out OK");
-            this.FanEditor(message)
+            // console.log("Out OK");
+            // this.FanEditor(message)
         }
         if (!info.hide_in_console)
             logger.debug(`[Chat:${message.chatId}][${user_id}:${this.printUserName(name)}] ${direction} ${message.message}`)
